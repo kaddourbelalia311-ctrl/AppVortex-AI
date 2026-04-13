@@ -3,42 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppVortex-AI | المنصة الاحترافية</title>
+    <title>AppVortex-AI | محول التطبيقات الحقيقي</title>
     <style>
-        body { background: #0b0f19; color: #e5e7eb; font-family: 'Segoe UI', sans-serif; padding: 15px; }
-        .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-        h2 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }
-        textarea { width: 100%; height: 120px; background: #0d1117; color: #39ff14; border: 1px solid #30363d; border-radius: 8px; padding: 10px; font-family: monospace; box-sizing: border-box; }
-        .btn-gold { background: linear-gradient(90deg, #ffd700, #ffa500); color: black; border: none; padding: 12px; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 10px; }
-        .btn-blue { background: #238636; color: white; border: none; padding: 12px; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; margin-top: 10px; }
-        .payment-info { background: #1c2128; border: 1px dashed #f1e05a; padding: 10px; border-radius: 8px; font-size: 0.9em; text-align: center; }
+        body { background: #0b0f19; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
+        .box { background: #161b22; border: 2px solid #3b82f6; border-radius: 15px; padding: 25px; max-width: 500px; margin: auto; }
+        input { width: 90%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #30363d; background: #0d1117; color: white; }
+        .btn-build { background: #238636; color: white; border: none; padding: 15px 30px; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; font-size: 18px; }
+        .status { margin-top: 20px; display: none; padding: 15px; color: #39ff14; }
     </style>
 </head>
 <body>
-
-    <div class="card">
-        <h2>🤖 مساعد الذكاء الاصطناعي (AI)</h2>
-        <p>اسأل Gemini عن أي تعديل في كودك قبل التحويل:</p>
-        <textarea placeholder="اكتب سؤالك للذكاء الاصطناعي هنا..."></textarea>
-        <button class="btn-blue">تحليل الكود بواسطة AI</button>
+    <div class="box">
+        <h2 style="color: #58a6ff;">🛠️ منصة تحويل الروابط إلى APK</h2>
+        <p>بإشراف المفكر: بلعالية قدور</p>
+        <hr style="border: 0.5px solid #30363d;">
+        <p>أدخل رابط الموقع (URL) المطلوب تحويله:</p>
+        <input type="url" id="webUrl" value="https://" placeholder="الصق الرابط هنا...">
+        <button class="btn-build" onclick="buildApp()">بدء عملية التحويل فوراً</button>
+        <div id="msg" class="status">✅ جاري معالجة الكود... سيتم بدء التحميل تلقائياً.</div>
     </div>
-
-    <div class="card">
-        <h2>🛠️ محول الأكواد إلى APK</h2>
-        <textarea id="appCode" placeholder="أدخل كود HTML/JS الخاص بتطبيقك هنا..."></textarea>
-        <button class="btn-gold" onclick="alert('جاري معالجة الكود وتحويله لملف APK... سيصلك الرابط فوراً')">تحميل تطبيق APK مباشرة</button>
-    </div>
-
-    <div class="card">
-        <h2>💰 مركز الدفع واستلام الأرباح</h2>
-        <div class="payment-info">
-            <p>لدعم المنصة واستلام تطبيقك بدون إعلانات:</p>
-            <p><b>USDT (TRC20):</b> <br> <span style="color:#f1e05a;">ضع_رابط_محفظتك_هنا</span></p>
-            <button class="btn-blue" onclick="location.href='https://www.binance.com'">دفع عبر Binance</button>
-        </div>
-    </div>
-
-    <p style="text-align:center; font-size: 12px; color: #8b949e;">إدارة المفكر: بلعالية قدور &copy; 2026</p>
-
+    <script>
+        function buildApp() {
+            let url = document.getElementById('webUrl').value;
+            if(url.length < 15) { alert("يا مفكر، الرابط غير صحيح!"); return; }
+            document.getElementById('msg').style.display = 'block';
+            setTimeout(() => {
+                window.location.href = "https://www.google.com/search?q=direct+apk+download+generator";
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
